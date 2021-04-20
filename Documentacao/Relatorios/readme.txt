@@ -1,0 +1,1 @@
+Coloque aqui as atividades desenvolvidas na semana
