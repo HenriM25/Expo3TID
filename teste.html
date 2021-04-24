@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Formulário de Login em Janela Modal com Bootstrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Link para o arquivo Bootstrap CSS -->
+        <link rel="stylesheet" href= "teste.css" type="text/css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default"><!-- Código do NavBar -->
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#myModal"><!-- Link que abre a janela modal -->
+                                Entrar 
+                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><!-- Header do modal -->
+                        <h4 class="modal-title">Fazer login</h4><!-- Título -->
+                    </div>
+                    <div class="modal-body"><!-- Corpo do modal -->
+                        <form action=""><!-- Início do Formulário -->
+                            <div class="form-group">
+                                <p>Email:</p>
+                                <input type="email" class="form-control" placeholder="Digite seu email">
+                            </div>
+                            <div class="form-group">
+                            <p>Senha:</p>                          
+                                <input type="password" class="form-control" placeholder="Digite sua senha">
+                            </div>
+                    <div class="senha"><a href="#">Esqueceu sua senha?</a></div>
+                            <button class="btn ">Entrar</button>
+                            
+                           <br><br>
+                            <center>
+                                <div class="posicao-btn">
+                                    &nbsp;&nbsp;<a href="cadastro.html"><button class="btn2 ">Cadastrar</button></a>
+                               &nbsp;&nbsp; <button class="btn3 ">Entrar como visitante</button>
+                            </div>
+                            </center>
+                        </form>
+                    </div>
+                    <div class="modal-footer"><!-- Footer do Modal -->
+                        <button type="button" class="btn4" data-dismiss="modal">
+                            Fechar <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>                
+                    </div>
+                </div>
+            </div>
+        </div><!-- ##Fim do Modal -->
+        
+        
+        
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
+    </body>
+</html>
