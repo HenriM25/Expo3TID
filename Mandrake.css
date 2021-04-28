@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #cabecalho {
     width: 95%;
     padding: 50px 5%;
@@ -8,8 +12,9 @@
 body {
     margin-left: 20px;
     text-align: center;  
-    background-color: #e7dddb;
+    background-color:wheat;
     font-size: 50px;
+    background-image: linear-gradient(rgba(241, 65, 162, 0.5),purple);
 }
 
 #Banner {
@@ -24,6 +29,7 @@ body {
     min-height: 1000px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
+    overflow: hidden;
 }
 
 nav {
@@ -83,9 +89,11 @@ nav {
 
   .Home {
       border: solid 1px;
-      border-radius: 10px;
-      width: 500px;
-      margin-left: auto;
+      border-radius: 5px;
+      padding: 4px;
+      margin: 10px;
+      float: center;
+      overflow: hidden;
   }
   .Home img {
       width: 50px;
@@ -104,8 +112,11 @@ nav {
     border-radius: 10px;
   }
   .Filtro {
-    width: 300px;
-    margin-right: auto;
+    border: solid 1px;
+    padding: 4px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
   }
 
   @media only screen and (min-width: 600px) {
