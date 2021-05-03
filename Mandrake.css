@@ -119,6 +119,20 @@ nav {
     overflow: hidden;
   }
 
+  .sobre {
+    padding: 4px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .nos {
+    padding: 4px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
+
   @media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
