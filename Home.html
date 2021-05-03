@@ -9,42 +9,39 @@
 
 <link rel="stylesheet" href= "Mandrake.css" type="text/css" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 </head>
 <body>
+
+<header>
+
   <div id="Banner">
-    <img src="IMG/BannerTeste3.png">
+    <a href="Home.html">
+      <img src="IMG/BannerTeste3.png" width="100%">
+    </a>
   </div>  
 <nav>
     
-  <li><a class="active" href="Home.html"> <img src="C:\Users\hempp\Expo3TID\Expo3TID\IMG\EMLogo.png" height="70" width="70" > </a></li>
-    <li><a href="quadros.html">Artes</a></li>
-  <li><a href="quemsomos.html">Quem Somos?</a></li>
+  <!-- <li><a class="active" href="Home.html"> <img src="IMG\EMLogo.png" height="70" width="70" > </a></li> -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
+      <div class="dropdown-content">
+        <a href="quadros.html"> Quadros </a>
+        <a href=".html"> Esculturas </a>
+      </div>
+  </li>
+  <li><a href="quemsomos.html">Conheça-nos</a></li>
   <li class="dropdown" style="float:right">
     <a href="javascript:void(0)" class="dropbtn">Entrar <img src="IMG/Person.jpg" height="25" width="25"></a>
       <div class="dropdown-content">
         <a href="#" data-toggle="modal" data-target="#myModal"> Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> </a>
         <a href=".html">Sair</a>
       </div>
-    
+    </li> 
+
 </nav>
 
-    
-<div id="Page">
-
-    <br>
-
-      <div class="Filtro col-2">
-        <h1>Filtro</h1>
-        <p>AAAAAA</p>
-        <p>AAAAAA</p>
-      </div>
-
-      <div class="Home col-9.5">
-        <h1>HOME</h1>
-      </div>
-
-</div>
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
   <div class="modal-dialog">
       <div class="modal-content">
@@ -81,9 +78,34 @@
       </div>
   </div>
 </div><!-- ##Fim do Modal -->
-
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
 
-    </body>
+</header>    
+
+<div id="Page">
+
+    <br>
+
+      <div class="Filtro col-2">
+        <h1>Filtro</h1>
+        <p>AAAAAA</p>
+        <p>AAAAAA</p>
+      </div>
+
+      <div class="Home col-9.5">
+        <h1>HOME</h1>
+      </div>
+
+</div>
+
+<footer>
+  <div id="footer">
+
+    <h1> Exposição Mandrake </h1>
+
+  </div>
+</footer>
+
+ </body>
 </html>
