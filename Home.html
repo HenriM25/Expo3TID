@@ -22,7 +22,7 @@
       <img src="IMG/BannerTeste3.png" width="100%">
     </a>
   </div>  
-<nav>
+<nav id="menu">
     
   <!-- <li><a class="active" href="Home.html"> <img src="IMG\EMLogo.png" height="70" width="70" > </a></li> -->
   <li><a href="Home.html">Início</a></li>
@@ -30,7 +30,7 @@
     <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
       <div class="dropdown-content">
         <a href="quadros.html"> Quadros </a>
-        <a href=".html"> Esculturas </a>
+        <a href="escultura.html"> Esculturas </a>
       </div>
   </li>
   <li><a href="quemsomos.html">Conheça-nos</a></li>
@@ -89,11 +89,11 @@
 
     <br>
 
-      <div class="Filtro col-2">
+      <!-- <div class="Filtro col-2">
         <h1>Filtro</h1>
         <p>AAAAAA</p>
         <p>AAAAAA</p>
-      </div>
+      </div> -->
 
       <div class="Home col-9.5">
         <h1>HOME</h1>
@@ -106,8 +106,28 @@
 
     <h1> Exposição Mandrake </h1>
 
+    <div class="Ind">
+
+      <h4> Mandrake's Industries 2019-2021 </h4>  
+
+    </div>
+
   </div>
 </footer>
+<script>
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
+      document.getElementById("menu").style.position="fixed";
+      document.getElementById("menu").style.marginLeft="5%";
+      document.getElementById("menu").style.marginRight="5%";
+    } else {
+      document.getElementById("menu").style.position="sticky";
+      // document.getElementById("menu").style.width="100%";
+    }
+  }
+  </script>
 
  </body>
 </html>
