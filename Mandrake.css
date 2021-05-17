@@ -1,53 +1,88 @@
+
 * {
   box-sizing: border-box;
 }
 
-#cabecalho {
-    width: 95%;
-    padding: 50px 5%;
-    background-color: darkred;
-    text-align: center;
-    font-size: 50px;
-}
 body {
     margin-left: 20px;
     text-align: center;  
     background-color:wheat;
     font-size: 50px;
-    background-image: linear-gradient(rgba(241, 65, 162, 0.5),purple);
+    background-image: linear-gradient(rgba(241, 65, 162, 0.5),#906fa8);
 }
 
 #Banner {
     margin-top: 15px;
+    margin-bottom: 3px;
+    margin-left: 5.5%;
+    margin-right: 5.5%;
+    overflow: hidden;
+    
 }
 
 #Page {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     font-family: 'Times New Roman', Times, serif; 
     background-color:white;
     min-height: 1000px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    padding-bottom: 5px;
+}
+
+#footer {
+    background-color: #22211c;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 25px;
+    /* border-radius: 15px; */
+    width: 100%;
+    height: 250px;
+    
+}
+
+.Ind {
+  margin-top: 140px;
+  height: 25px;
+  width: 500px;
+  margin-left: 36.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color:#906fa8;
+  border-radius: 5px 5px 0px 0px;
 }
 
 nav {
     list-style-type: none;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 15px;
-    margin-top: -5px;
-    padding: 0;
-    height: 100px;
-    overflow: hidden;
+    /* margin-left: 35%; */
+    margin-left: 5%;
+    margin-right: 5%;
+    /* margin-bottom: 3px; */
+    /* margin-top: 50px; */
+    margin-top: -3.5px;
+    height: 70px;
+    /* width: 100%; */
+    /* overflow: hidden; */
     background-color: #333;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    /* font-family: 'Poppins'; */
+    font-style: italic;
+    text-align: center;
+    position:sticky;
+    top: 0;
   }
   
   li {
     float: left;
-    
+    text-decoration: none;
+    padding: 10px;
   }
   
   li a, .dropbtn {
@@ -59,32 +94,40 @@ nav {
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    background-color: #111;
+    box-shadow: 0 0 5px rgba(241, 65, 162, 0.8),
+                0 0 5px rgba(241, 65, 162, 0.8);
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+    color: white;
   }
   
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #E1DCDB;
+    background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
+    border-radius: 10px;
+    border-left: solid 3px purple;
+    margin-top: 5px;
   }
   
   .dropdown-content a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
+  .dropdown-content a:hover {
+    color: white;
+  }
+ 
   .dropdown:hover .dropdown-content {
     display: block;
+    color: black;
   }
 
   .Home {
@@ -113,6 +156,20 @@ nav {
   }
   .Filtro {
     border: solid 1px;
+    padding: 4px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .sobre {
+    padding: 4px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .nos {
     padding: 4px;
     margin: 10px;
     float: left;
@@ -290,4 +347,15 @@ margin-top: 25px;
 }
 .Esculturas div p {
   font-size: 20px;
+}
+
+@media all and (masx-width: 600px) {
+  nav {
+    padding: 5px 30px;
+  }
+
+  nav li {
+    width: 100%;
+
+  }
 }
