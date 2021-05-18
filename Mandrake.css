@@ -354,6 +354,16 @@ margin-top: 25px;
 .Quadros div p {
   font-size: 20px;
 }
+.Esculturas div {
+display: inline-block;
+margin: 25px;
+border: dashed 1px;
+font-size: 15px;
+margin-top: 25px;
+}
+.Esculturas div p {
+  font-size: 20px;
+}
 
 @media all and (masx-width: 600px) {
   nav {
