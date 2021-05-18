@@ -33,15 +33,15 @@
         <a href="quadros.html"> Quadros </a>
         <a href="escultura.html"> Esculturas </a>
       </div>
-  </li>
+  <li>
   <li><a href="quemsomos.html">Conheça-nos</a></li>
   <li class="dropdown" style="float:right">
     <a href="javascript:void(0)" class="dropbtn">Entrar <img src="IMG/Person.jpg" height="25" width="25"></a>
       <div class="dropdown-content">
         <a href="#" data-toggle="modal" data-target="#myModal"> Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> </a>
-        <a href=".html">Sair</a>
+          <a href=".html">Sair</a>
       </div>
-    </li> 
+    </li>
 
 </nav>
 
@@ -97,43 +97,128 @@
          <div class="Esculturas">
       <li>Destaques de escultores brasileiros: Victor Brecheret(1894-1955) e Aleijadinho(1730-1814)</li> 
          <h1>Esculturas de Victor Brecheret(1894-1955)</h1>
-             <div>
-        <img src="IMG/desenhoseesculturas.jpg" height="300" width="300"/>
-        <p>Titulo:Desenhos e Esculturas</p>
-      </div>
-         <div>
-        <img src="IMG/mulheresdecorpoealma.jpg" height="300" width="300"/>
-        <p>Titulo:Mulheres de Corpo e Alma</p>
-      </div>
-        <div>
-        <img src="IMG/bailarina.jpg" height="300" width="300"/>
-        <p>Titulo:Bailarina</p>
-      </div>
-             <div>
-        <img src="IMG/fauno.jpg" height="300" width="300"/>
-        <p>Titulo:Fauno</p>
-      </div>
-             <div>
-        <img src="IMG/eva.jpg" height="300" width="300"/>
-        <p>Titulo:Eva</p>
-      </div>
+      <style>
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+          
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+     border:solid #000; 
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 180px 180px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 180px 0 0 180px;
+}
+.prev {
+  left: 0;
+  border-radius: 180px 0 0 180px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+</style>  
+   <div class="slideshow-container">
+  <div class="mySlides1">
+  <img src="IMG/desenhoseesculturas.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Desenhos e Esculturas</div>
+  </div>
+
+  <div class="mySlides1">
+    <img src="IMG/mulheresdecorpoealma.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Mulheres de Corpo e Alma</div>
+  </div>
+
+  <div class="mySlides1">
+     <img src="IMG/bailarina.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Bailarina</div>
+  </div>
+       
+ <div class="mySlides1">
+    <img src="IMG/fauno.jpg" height="300" width="300"/>
+     <div class="text">Titulo:Fauno</div>
+  </div>
+       
+       <div class="mySlides1">
+     <img src="IMG/eva.jpg" height="300" width="300"/>
+           <div class="text">Titulo:Eva</div>
+  </div>
+       
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+          
+             
              <h1>Esculturas de Aleijadinho(1730-1814)</h1>
-              <div>
-        <img src="IMG/carregamentocruz.jpg" height="300" width="300"/>
-        <p>Titulo:Carregameto da Cruz</p>
-      </div>
-             <div>
-        <img src="IMG/santanne.jpg" height="300" width="300"/>
-        <p>Titulo:Sant'Anne Mestra</p>
-      </div>
-             <div>
-        <img src="IMG/nsdd.jpg" height="300" width="300"/>
-        <p>Titulo:Nossa Senhora das Dores</p>
-      </div>
-             <div>
-        <img src="IMG/piedade.jpg" height="300" width="300"/>
-        <p>Titulo:Nossa Senhora da Piedade</p>
-      </div>
+              <div class="slideshow-container">
+  <div class="mySlides2">
+       <img src="IMG/carregamentocruz.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Carregameto da Cruz</div>
+  </div>
+
+  <div class="mySlides2">
+    <img src="IMG/santanne.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Sant'Anne Mestra</div>
+  </div>
+
+  <div class="mySlides2">
+   <img src="IMG/nsdd.jpg" height="300" width="300"/>
+      <div class="text">Titulo:Nossa Senhora das Dores</div>
+  </div>
+
+    <div class="mySlides2">
+    <img src="IMG/piedade.jpg" height="300" width="300"/>
+        <div class="text">Titulo:Nossa Senhora da Piedade</div>
+  </div>
+                  
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+             
              <h1>História da Escultura</h1>
         <p>A origem da Escultura tem inicio na Idade Paleolítica. Nessa Era as esculturas eram feitas a partir de materiais como marfim e ossos, e na maioria das vezes, essas esculturas formavam figuras femininas.</p>
 
