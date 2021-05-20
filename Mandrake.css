@@ -25,11 +25,13 @@ body {
     margin-right: 5%;
     font-family: 'Times New Roman', Times, serif; 
     background-color:white;
-    min-height: 1000px;
+    /* min-height: 1000px; */
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
     /* overflow: hidden; */
     padding-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #footer {
@@ -42,6 +44,7 @@ body {
     height: 350px;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .ft {
@@ -70,6 +73,7 @@ body {
   text-align: center;
   background-color:#906fa8;
   border-radius: 5px 5px 0px 0px;
+  color: #22211c;
 }
 
 nav {
@@ -179,18 +183,18 @@ nav {
     overflow: hidden;
   }
 
-  .sobre {
-    padding: 4px;
-    margin: 10px;
-    float: left;
-    overflow: hidden;
+  .Sobre {
+    text-align: right;
+  
   }
 
-  .nos {
-    padding: 4px;
-    margin: 10px;
-    float: left;
-    overflow: hidden;
+  .Nos {
+
+
+  }
+
+  .expo {
+    text-align: left;
   }
 
   @media only screen and (min-width: 600px) {
@@ -225,13 +229,15 @@ nav {
 }
 
 .modal-body{
-  background-color: #ffbfcf;
+  background-color: white;
   text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .modal-header{
   display:block;
   text-align: center;
-  background-color: #ffbfcf;
+  background-color: white;
 }
 .modal-title{
   font-size: 50px;
@@ -243,6 +249,7 @@ nav {
 .posicao-btn{
   position:inherit;
  display:flex;
+justify-content: center;
 }
 .btn{
 font-size: 20px;
@@ -253,57 +260,44 @@ transition: all .2s ease-in-out;
 letter-spacing: 1px;
 border: none;
 border-radius: 23px;
-  color: darkblue;
-  background: #906fa8;
+  color: white;
+  background: black;
   display: block;
   text-align: center;
 }
 .btn2{
 font-size: 20px;
-width: 250px;
+width: 450px;
 height: 40px;
+padding-top: 5px;
 cursor: pointer;
 transition: all .2s ease-in-out;
 letter-spacing: 1px;
 border: none;
-   border-radius: 2px;
-  color: black;
-  background: #7cbfb6;
-  display: block;
-   text-align: center;
+border-radius: 2px;
+color: black;
+background: linear-gradient(rgba(241, 65, 162, 0.5),#906fa8);
+display: block;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+    
 }
-.btn3{
-font-size: 20px;
-width: 300px;
-height: 40px;
-cursor: pointer;
-transition: all .2s ease-in-out;
-letter-spacing: 1px;
-border: none;
-  border-radius: 2px;
-  color: black;
-  background: #f9d877;
-  display: block;
-  text-align: center;
+.form-group{
+    position: relative;
+    width:auto;
+    height: auto;
 }
-.btn4{
-font-size: 20px;
-width: 110px;
-height: 35px;
-cursor: pointer;
-transition: all .2s ease-in-out;
-letter-spacing: 1px;
-border: none;
-  color: black;
-  background: #fae5ac;
-  text-align: center;
-}
+
+/* tirei 2 */
 .btn:focus {
 outline: none;
 }
 
 .btn:hover {
 transform: scale(1.1);
+text-decoration: none;
+color: white;
 }
 .btn2:focus {
 outline: none;
@@ -311,6 +305,8 @@ outline: none;
 
 .btn2:hover {
 transform: scale(1.1);
+text-decoration: none;
+color: black;
 }
 .btn3:focus {
 outline: none;
@@ -340,8 +336,8 @@ height: 100px;
   
 }
 #Arte {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   font-family: 'Times New Roman', Times, serif; 
 }
 
