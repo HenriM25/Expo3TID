@@ -25,10 +25,10 @@ body {
     margin-right: 5%;
     font-family: 'Times New Roman', Times, serif; 
     background-color:white;
-    /* min-height: 1000px; */
+    min-height: 1000px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding-bottom: 5px;
     padding-left: 2%;
     padding-right: 2%;
@@ -81,7 +81,7 @@ nav {
     /* margin-left: 35%; */
     margin-left: 5%;
     margin-right: 5%;
-    /* margin-bottom: 3px; */
+    margin-bottom: 3px;
     /* margin-top: 50px; */
     margin-top: -3.5px;
     height: 70px;
@@ -184,16 +184,37 @@ nav {
 
   .Sobre {
     text-align: right;
+    float: right;
+    border-left: solid black 1px;
+    padding-left: 10px;
+    /* overflow: hidden; */
   
   }
 
   .Nos {
+    float: left;
+    /* overflow: hidden; */
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: -5px;
 
 
   }
 
   .expo {
     text-align: left;
+    float: left;
+    overflow: hidden;
+    border-right: solid black 1px;
+    padding-bottom: 240px;
+
+  }
+
+  .staff {
+    border: solid black 1px;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
   }
 
   @media only screen and (min-width: 600px) {
