@@ -225,13 +225,15 @@ nav {
 }
 
 .modal-body{
-  background-color: #ffbfcf;
+  background-color: white;
   text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .modal-header{
   display:block;
   text-align: center;
-  background-color: #ffbfcf;
+  background-color: white;
 }
 .modal-title{
   font-size: 50px;
@@ -253,14 +255,14 @@ transition: all .2s ease-in-out;
 letter-spacing: 1px;
 border: none;
 border-radius: 23px;
-  color: darkblue;
-  background: #906fa8;
+  color: white;
+  background: black;
   display: block;
   text-align: center;
 }
 .btn2{
 font-size: 20px;
-width: 250px;
+width: 450px;
 height: 40px;
 cursor: pointer;
 transition: all .2s ease-in-out;
@@ -268,36 +270,18 @@ letter-spacing: 1px;
 border: none;
    border-radius: 2px;
   color: black;
-  background: #7cbfb6;
+  background: linear-gradient(rgba(241, 65, 162, 0.5),purple);
   display: block;
    text-align: center;
+    
 }
-.btn3{
-font-size: 20px;
-width: 300px;
-height: 40px;
-cursor: pointer;
-transition: all .2s ease-in-out;
-letter-spacing: 1px;
-border: none;
-  border-radius: 2px;
-  color: black;
-  background: #f9d877;
-  display: block;
-  text-align: center;
+.form-group{
+    position: relative;
+    width:auto;
+    height: auto;
 }
-.btn4{
-font-size: 20px;
-width: 110px;
-height: 35px;
-cursor: pointer;
-transition: all .2s ease-in-out;
-letter-spacing: 1px;
-border: none;
-  color: black;
-  background: #fae5ac;
-  text-align: center;
-}
+
+tirei 2
 .btn:focus {
 outline: none;
 }
