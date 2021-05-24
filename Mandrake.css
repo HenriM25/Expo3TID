@@ -94,7 +94,6 @@ body {
 
 nav {
     list-style-type: none;
-    margin-left: 35%;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 3px;
@@ -108,7 +107,7 @@ nav {
     /* border-radius: 10px; */
     font-size: 15px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Poppins';
     font-style: italic;
     text-align: center;
@@ -208,12 +207,16 @@ nav {
   }
 
   .Sobre {
-    text-align: right;
+    text-align: justify;
     float: right;
     padding-left: 10px;
     /* margin-top: -50px; */
     /* overflow: hidden; */
   
+  }
+
+  .Sobre h2 {
+    text-align: right;
   }
 
   .Nos {
@@ -225,7 +228,7 @@ nav {
   }
 
   .expo {
-    text-align: left;
+    text-align: justify;
     float: left;
     overflow: hidden;
 
@@ -385,9 +388,13 @@ height: 100px;
   
 }
 #Arte {
-  margin-left: 2%;
-  margin-right: 2%;
-  font-family: 'Times New Roman', Times, serif; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px; 
+}
+
+#Arte h1 {
+  font-size: 35px;
+  font-weight: 550;
 }
 
 .Quadros div {
