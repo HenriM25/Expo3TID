@@ -4,7 +4,7 @@ include("conexao.php");
 
     if(isset($_POST["ok"])){
         
-        $email = mysqli->escape_string($_POST['email']);
+        $email = mysqli>escape_string($_POST['email']);
         
         if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
             $erro[] = "E-mail inválido.";
