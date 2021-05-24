@@ -113,6 +113,7 @@ nav {
     text-align: center;
     position:sticky;
     top: 0;
+
     letter-spacing: 2px;
   }
   
@@ -407,6 +408,16 @@ margin-top: 25px;
 .Quadros div p {
   font-size: 20px;
 }
+.Esculturas div {
+display: inline-block;
+margin: 25px;
+border: dashed 1px;
+font-size: 15px;
+margin-top: 25px;
+}
+.Esculturas div p {
+  font-size: 20px;
+}
 
 @media all and (masx-width: 600px) {
   nav {
@@ -419,91 +430,41 @@ margin-top: 25px;
   }
 }
 
-.slider{
-  width:800px;
-  height: 700px;
-  border-radius: 10px;
-  overflow: hidden;
-  
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+          
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+     border:solid #000; 
 }
 
-.slides{
- width: 200%;
-  height: 500px;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  width: 50%;
-  transition: 2s;
-}
-
-.imagens{
-  width: 100%;
-  height: 100%;
-}
-
-.navigation-manual{
-  position: absolute;
-  width: 600px;
-  margin-top: 475px;
-  display: flex;
-  justify-content: center;
-  margin-left: 50px;
-}
-
-.manual-btn{
-  border: 2px solid black;
-  padding: 8px;
-  border-radius: 10px;
+.prev, .next {
   cursor: pointer;
-  transition: 1s;
-  
-}
-.manual-btn:not(:last-child){
-  margin-right: 40px;
-}
-
-manual-btn:hover{
-  background: #0000;
-}
-
-#radio1:checked ~ .first{
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-  margin-left: -50%;
-}
-
-.navigation-auto{
   position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 600px;
-  margin-top: 475px;
-  margin-left: 50px;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 180px 180px 0;
+  user-select: none;
 }
 
-.navigation-auto div{
-  border: 2px solid black;
-  padding: 8px;
-  border-radius: 10px;
-  transition: 1s;
-   }
-
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
-   }
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-  background: black;
+.next {
+  right: 0;
+  border-radius: 180px 0 0 180px;
+}
+.prev {
+  left: 0;
+  border-radius: 180px 0 0 180px;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: black;
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
 }

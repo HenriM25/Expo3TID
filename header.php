@@ -18,19 +18,19 @@
 <header>
 
   <div id="Banner">
-    <a href="index.html">
+    <a href="index.php">
       <img src="IMG/BannerTeste3.png" width="100%">
     </a>
   </div>  
 <nav id="menu">
     
   <!-- <li><a class="active" href="Home.html"> <img src="IMG\EMLogo.png" height="70" width="70" > </a></li> -->
-  <li><a href="index.html">Início</a></li>
+  <li><a href="index.php">Início</a></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
       <div class="dropdown-content">
-        <a href="quadros.html"> Quadros </a>
-        <a href="escultura.html"> Esculturas </a>
+        <a href="quadros.php"> Quadros </a>
+        <a href="escultura.php"> Esculturas </a>
       </div>
   </li>
   <li><a href=".html"> Explorar </a></li>
