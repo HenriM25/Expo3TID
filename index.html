@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href= "Mandrake.css" type="text/css" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
@@ -22,9 +23,9 @@
       <img src="IMG/BannerTeste3.png" width="100%">
     </a>
   </div>  
+
 <nav id="menu">
     
-  <!-- <li><a class="active" href="Home.html"> <img src="IMG\EMLogo.png" height="70" width="70" > </a></li> -->
   <li><a href="index.html">Início</a></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
@@ -62,7 +63,6 @@
                   </div>
                   <div class="senha"><a href="#">Esqueceu sua senha?</a></div>
                   <button value="Entrar" class="btn" type="submit">Entrar</button>
-                  
                  <br><br>
                   <center>
                       <div class="posicao-btn">
@@ -90,18 +90,111 @@
 
 <div id="Page">
 
+  <div id="BHome">
+
+    <img src="IMG/BannerHome2.png" width="100%";>
+  
+  </div>
+
     <br>
 
-      <!-- <div class="Filtro col-2">
-        <h1>Filtro</h1>
-        <p>AAAAAA</p>
-        <p>AAAAAA</p>
+      <!-- <div class="Home col-9.5">
+        <h1>HOME</h1>
       </div> -->
 
-      <div class="Home col-9.5">
-        <h1>HOME</h1>
+      <div class="expo col-6">
+
+        <h2>Exposição Mandrake</h2>
+
+        <br>
+        
+        <p>A exposição mandrake é uma galeria online que foi feita para levar um pouco da experiência de ir em uma galeria de arte,
+           podendo aprender e conhecer mais sobre as artes, tanto quanto suas histórias, autores e mais. E para quem é apreciador de arte,
+           poder visitar uma galeria online já que estamos vivendo um momento tão difícil de isolamento social. E se desejar mostrar suas artes,
+           para que outros apreciem, também é possível.</p>
       </div>
 
+      <br>
+
+    <div class="Nos col-5">
+      
+      <div class="slider"> 
+        <div class="slides"> 
+            
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+            
+          <div class="slide first"> 
+            <img  src="IMG/banhista.jpg" class="imagens"  alt="">
+          </div>
+
+          <div class="slide">
+            <img  src="IMG/atelier.jpg" class="imagens"   alt="">
+          </div>
+            
+          <div class="navigation-auto"> 
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+          </div>
+
+          <div class="navigation-manual"> 
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+          </div>
+            
+            
+        </div>
+      </div>    
+    </div>
+
+    <div class="col-6 col-m-4 staff">
+
+      <h2> Staff </h2>
+
+      <div class="staff1 col-6">
+      
+        <div class="slider"> 
+          <div class="slides"> 
+              
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+              
+            <div class="slide first"> 
+              <img  src="IMG/banhista.jpg" class="imagens"  alt="">
+            </div>
+  
+            <div class="slide">
+              <img  src="IMG/atelier.jpg" class="imagens"   alt="">
+            </div>
+              
+            <div class="navigation-auto"> 
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+            </div>
+  
+            <div class="navigation-manual"> 
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+            </div>
+              
+              
+          </div>
+        </div>    
+      </div> 
+
+    </div>
+
+    <div class="col-6 col-m-6 Sobre">
+   
+      <h2>Sobre nós</h2>
+
+      <br>
+        
+      <p>Somos de São Caetano do Sul, nos conhecemos estudando juntos.
+         Depois de encerrar o ensino médio, tivemos essa grande ideia, e como bons apreciadores de arte,
+         reunimos nossas ideias e demos inicio a esse projeto:</p>
+
+    </div>
 </div>
 
 <footer>
@@ -143,6 +236,18 @@
       // document.getElementById("menu").style.width="100%";
     }
   }
+  </script>
+
+  <script type="text/javascript">
+        var counter = 1; 
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter>2){
+                    counter = 1;
+                }
+                    
+            },10000);
   </script>
 
  </body>

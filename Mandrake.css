@@ -8,7 +8,7 @@ body {
     text-align: center;  
     background-color:wheat;
     font-size: 50px;
-    background-image: linear-gradient(rgba(241, 65, 162, 0.5),#906fa8);
+    background-image: linear-gradient(purple,rgba(241, 65, 162, 0.5));
 }
 
 #Banner {
@@ -23,13 +23,31 @@ body {
 #Page {
     margin-left: 5%;
     margin-right: 5%;
-    font-family: 'Times New Roman', Times, serif; 
+    /* font-family: 'Times New Roman', Times, serif;  */
     background-color:white;
-    min-height: 1000px;
+    /* min-height: 1000px; */
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 10000;
+}
+
+#Page h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#Page p {
+  font-weight: 450;
+  font-family: 'Poppins';
+}
+
+#Page div h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-weight: 550;
 }
 
 #footer {
@@ -42,6 +60,7 @@ body {
     height: 350px;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .ft {
@@ -70,14 +89,15 @@ body {
   text-align: center;
   background-color:#906fa8;
   border-radius: 5px 5px 0px 0px;
+  color: #22211c;
 }
 
 nav {
     list-style-type: none;
-    /* margin-left: 35%; */
     margin-left: 5%;
     margin-right: 5%;
-    /* margin-bottom: 3px; */
+    margin-bottom: 3px;
+    /* margin-top: 3px; */
     /* margin-top: 50px; */
     margin-top: -3.5px;
     height: 70px;
@@ -87,13 +107,13 @@ nav {
     /* border-radius: 10px; */
     font-size: 15px;
     text-decoration: none;
-    font-weight: 600;
-    /* font-family: 'Poppins'; */
+    font-weight: 500;
+    font-family: 'Poppins';
     font-style: italic;
     text-align: center;
     position:sticky;
     top: 0;
-    z-index: 10000;
+    letter-spacing: 2px;
   }
   
   li {
@@ -147,6 +167,13 @@ nav {
     color: black;
   }
 
+  #BHome {
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-top: -4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
   .Home {
       border: solid 1px;
       border-radius: 5px;
@@ -179,18 +206,47 @@ nav {
     overflow: hidden;
   }
 
-  .sobre {
-    padding: 4px;
-    margin: 10px;
-    float: left;
-    overflow: hidden;
+  .Sobre {
+    text-align: justify;
+    float: right;
+    padding-left: 10px;
+    /* margin-top: -50px; */
+    /* overflow: hidden; */
+  
   }
 
-  .nos {
-    padding: 4px;
-    margin: 10px;
+  .Sobre h2 {
+    text-align: right;
+  }
+
+  .Nos {
+    float: left;
+    /* overflow: hidden; */
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: -5px;
+  }
+
+  .expo {
+    text-align: justify;
     float: left;
     overflow: hidden;
+
+  }
+
+  .staff1 {
+    float: left;
+    /* overflow: hidden; */
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: -5px;
+  }
+
+  .staff {
+    margin-top: -30px;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
   }
 
   @media only screen and (min-width: 600px) {
@@ -245,6 +301,7 @@ nav {
 .posicao-btn{
   position:inherit;
  display:flex;
+justify-content: center;
 }
 .btn{
 font-size: 20px;
@@ -264,15 +321,18 @@ border-radius: 23px;
 font-size: 20px;
 width: 450px;
 height: 40px;
+padding-top: 5px;
 cursor: pointer;
 transition: all .2s ease-in-out;
 letter-spacing: 1px;
 border: none;
-   border-radius: 2px;
-  color: black;
-  background: linear-gradient(rgba(241, 65, 162, 0.5),purple);
-  display: block;
-   text-align: center;
+border-radius: 2px;
+color: black;
+background: linear-gradient(rgba(241, 65, 162, 0.5),#906fa8);
+display: block;
+align-items: center;
+justify-content: center;
+text-decoration: none;
     
 }
 .form-group{
@@ -281,13 +341,15 @@ border: none;
     height: auto;
 }
 
-tirei 2
+/* tirei 2 */
 .btn:focus {
 outline: none;
 }
 
 .btn:hover {
 transform: scale(1.1);
+text-decoration: none;
+color: white;
 }
 .btn2:focus {
 outline: none;
@@ -295,6 +357,8 @@ outline: none;
 
 .btn2:hover {
 transform: scale(1.1);
+text-decoration: none;
+color: black;
 }
 .btn3:focus {
 outline: none;
@@ -324,9 +388,13 @@ height: 100px;
   
 }
 #Arte {
-  margin-left: 5%;
-  margin-right: 5%;
-  font-family: 'Times New Roman', Times, serif; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px; 
+}
+
+#Arte h1 {
+  font-size: 35px;
+  font-weight: 550;
 }
 
 .Quadros div {
@@ -361,41 +429,91 @@ margin-top: 25px;
   }
 }
 
-.mySlides1, .mySlides2 {display: none}
-img {vertical-align: middle;}
-          
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-     border:solid #000; 
+.slider{
+  width:800px;
+  height: 700px;
+  border-radius: 10px;
+  overflow: hidden;
+  
 }
 
-.prev, .next {
-  cursor: pointer;
+.slides{
+ width: 200%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 50%;
+  transition: 2s;
+}
+
+.imagens{
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-manual{
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 180px 180px 0;
-  user-select: none;
+  width: 600px;
+  margin-top: 475px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
 }
 
-.next {
-  right: 0;
-  border-radius: 180px 0 0 180px;
+.manual-btn{
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  
 }
-.prev {
-  left: 0;
-  border-radius: 180px 0 0 180px;
+.manual-btn:not(:last-child){
+  margin-right: 40px;
 }
 
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
+manual-btn:hover{
+  background: #0000;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -50%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin-top: 475px;
+  margin-left: 50px;
+}
+
+.navigation-auto div{
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 1s;
+   }
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+   }
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: black;
 }
