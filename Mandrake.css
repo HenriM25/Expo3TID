@@ -12,17 +12,17 @@ body {
 }
 
 #Banner {
-    margin-top: 15px;
-    margin-bottom: 3px;
-    margin-left: 5.5%;
-    margin-right: 5.5%;
-    overflow: hidden;
+    /* margin-top: 15px; */
+    /* margin-bottom: 3px; */
+    margin-left: 2%;
+    margin-right: 2%;
+    /* overflow: hidden; */
     
 }
 
 #Page {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     /* font-family: 'Times New Roman', Times, serif;  */
     background-color:white;
     /* min-height: 1000px; */
@@ -36,7 +36,7 @@ body {
 }
 
 #Page h1 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Poppins';
 }
 
 #Page p {
@@ -45,7 +45,7 @@ body {
 }
 
 #Page div h2 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Poppins';
   font-size: 40px;
   font-weight: 550;
 }
@@ -94,26 +94,31 @@ body {
 
 nav {
     list-style-type: none;
-    margin-left: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 3px;
+    margin-bottom: 3px; */
     /* margin-top: 3px; */
     /* margin-top: 50px; */
-    margin-top: -3.5px;
+    /* margin-top: -3.5px; */
     height: 70px;
     /* width: 100%; */
     /* overflow: hidden; */
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: white;
     /* border-radius: 10px; */
     font-size: 15px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Poppins';
     font-style: italic;
     text-align: center;
     position:sticky;
     top: 0;
     letter-spacing: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: opacity 0.25s;
   }
   
   li {
@@ -124,25 +129,30 @@ nav {
   
   li a, .dropbtn {
     display: inline-block;
-    color: white;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover, .dropdown:hover .dropbtn {
-    box-shadow: 0 0 5px rgba(241, 65, 162, 0.8),
-                0 0 5px rgba(241, 65, 162, 0.8);
+    box-shadow: 0 0 5px rgba(220, 65, 241, 0.8),
+                0 0 5px rgba(220, 65, 241, 0.8);
     border-radius: 10px 10px 10px 10px;
     text-decoration: none;
-    color: white;
+    color: #333;
+  }
+
+  a.active {
+    border: solid 2px purple;
+    border-radius: 10px 10px 10px 10px;
   }
   
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -159,12 +169,69 @@ nav {
   }
   
   .dropdown-content a:hover {
-    color: white;
+    color: #333;
   }
  
   .dropdown:hover .dropdown-content {
     display: block;
-    color: black;
+    color: #333;
+  }
+
+  nav #icon {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    float: left;
+    margin-top: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+  }
+
+  @media (max-width: 1048px) {
+    label.logo {
+      font-size: 32;
+      padding-left: 60px;
+    }
+    nav ul {
+      margin-right: 20px;
+    }
+    nav a {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    nav #icon {
+      display: block;
+    }
+    nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #22211c;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav li {
+      display: block;
+      margin-right: 50px 0;
+      line-height: 30px;
+    }
+    nav a, .dropbtn {
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    .dropdown-content a {
+      padding: 5px;
+    }
+    nav ul.show {
+      left: 0;
+    }
+
   }
 
   #BHome {
@@ -228,8 +295,9 @@ nav {
   }
 
   .expo {
-    text-align: justify;
+    /* text-align: justify; */
     float: left;
+    text-align: left;
     overflow: hidden;
 
   }
@@ -237,8 +305,6 @@ nav {
   .staff1 {
     float: left;
     /* overflow: hidden; */
-    margin-left: 10px;
-    padding-left: 10px;
     margin-top: -5px;
   }
 
@@ -406,17 +472,6 @@ margin-top: 25px;
 }
 .Quadros div p {
   font-size: 20px;
-}
-
-@media all and (masx-width: 600px) {
-  nav {
-    padding: 5px 30px;
-  }
-
-  nav li {
-    width: 100%;
-
-  }
 }
 
 .slider{
