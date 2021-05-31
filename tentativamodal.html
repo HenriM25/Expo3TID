@@ -85,112 +85,11 @@
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
 
-    </header> </body>
-    <body>
-        <style type="text/css">
-#perfil{
-	width:270px;
-	height:270px;
-	background-color:#FF8C00;
-    text-align: center;
-	border-radius: 180px 180px 180px 180px;
-    display: table;              
-    table-layout: fixed;        
-    border-collapse: separate;
-    border-spacing: 5px 0px;   
-     border: 8px solid #000;  
-	}
-    button{
-    background: transparent;
-    border: none !important;
+    </header><div id="Page">
     
-            }
-    #apelido{
-        font-family: harrington;
-        font:bold;
-     border: 2px solid #000;
-    display: table;                    
-    border-collapse: separate;
-    border-spacing: 5px 0px;  
-      }
-    #obras{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 10;
-    display: table;              
-    table-layout: fixed;         
-    border-collapse: separate;   
-    border-spacing: 5px 0px; 
-          }
-        #mais:hover{
-            
-        }   
-.item {display: table-cell;}
-.item img{width:200px;}
-    </style><div id="Page">
-    
+    <td><button type="button" data-toggle="modal" data-target="#Obras"> <ul id="mais"><li class="item"> <img src="IMG/maisssss.jpeg" height="300" width="250" alt=""></li></ul></button></td>
 
-    <div id="perfil">
-        
-        <table border="0">
-	<tr>
-        <td> <button type="button"  data-toggle="modal" data-target="#Perfil"> <br> <img src="IMG/eu.jpeg" height="200" width="190" alt=""></button></td>
-        
-        <td><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></td>
-        
-        <td><h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1></td>
-        
-        <td><div id="apelido"><form action="myphp.php" method="post"><h1>Apelido:<input type="text" size="25" maxlength="25" /></h1>
-        <td><input type="reset" value="Delete" /></td>
-		<td><input type="submit" value="Confirm" /></td>
-            </form></div></td></tr></table></div>
-        
-	
-        
-        
-        
-        
-    <ul id="obras">
-        <table border="0">
-	<tr>
-		<td><li class="item"><img src="IMG/novaarte.jpeg" height="300" width="400px"/></li></td>
-        
-		 <td><button type="button" data-toggle="modal" data-target="#Obras"> <ul id="mais"><li class="item"> <img src="IMG/maisssss.jpeg" height="300" width="250" alt=""></li></ul></button></td>
-	</tr>
-        </table></ul>
-    
-        <!-- Modal -->
-<div id="Perfil" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Alterar Foto de Perfil</h4>
-      </div>
-      <div class="modal-body">
-        <p>Adicionar uma foto ajuda as pessoas a reconhecerem seu perfil, além de mostrar quando a conta esta conectada.</p>
-      </div>
-        <table border="0">
-	<tr>
-		<td> <input type="hidden" name="MAX_FILE_SIZE" value="4194304"/></td>
-		<td><input type="file"/></td>
-        <td><input type="reset" value="Delete" /></td>
-        <td><input type="file" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg"  multiple /> </td>
-	</tr>
-	
-</table>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-        
-        <!-- Modal Obra-->
+<!-- Modal -->
 <div id="Obras" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -224,9 +123,4 @@
  
 
 
-        </form></div></div></div>
-        
-        
-        </div>     
-</body>
-</html>
+        </form></div></div></div></div></body></html>
