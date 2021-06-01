@@ -88,7 +88,7 @@
     </header> </body>
     <body>
         <style type="text/css">
-#perfil{
+   #perfil{
 	width:270px;
 	height:270px;
 	background-color:#FF8C00;
@@ -103,6 +103,7 @@
     button{
     background: transparent;
     border: none !important;
+        text-align: center;
     
             }
     #apelido{
@@ -112,6 +113,7 @@
     display: table;                    
     border-collapse: separate;
     border-spacing: 5px 0px;  
+        text-align: center;
       }
     #obras{
     list-style-type: none;
@@ -122,8 +124,9 @@
     table-layout: fixed;         
     border-collapse: separate;   
     border-spacing: 5px 0px; 
+        text-align: center;
           }
-        #mais:hover{
+        #mais:hover{text-align: center;
             
         }   
 .item {display: table-cell;}
@@ -131,20 +134,20 @@
     </style><div id="Page">
     
 
-    <div id="perfil">
+    
         
         <table border="0">
 	<tr>
-        <td> <button type="button"  data-toggle="modal" data-target="#Perfil"> <br> <img src="IMG/eu.jpeg" height="200" width="190" alt=""></button></td>
+        <td><div id="perfil" align="center" class="imagens_home"> <button type="button"  data-toggle="modal" data-target="#Perfil"> <br> <img src="IMG/eu.jpeg" height="190" width="190" alt=""></button></div></td>
         
-        <td><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></td>
+        <td><h1>&nbsp;</h1></td>
         
-        <td><h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1></td>
+      
         
         <td><div id="apelido"><form action="myphp.php" method="post"><h1>Apelido:<input type="text" size="25" maxlength="25" /></h1>
         <td><input type="reset" value="Delete" /></td>
 		<td><input type="submit" value="Confirm" /></td>
-            </form></div></td></tr></table></div>
+            </form></div></td></tr></table>
         
 	
         
@@ -172,16 +175,16 @@
       </div>
       <div class="modal-body">
         <p>Adicionar uma foto ajuda as pessoas a reconhecerem seu perfil, além de mostrar quando a conta esta conectada.</p>
-      </div>
+      </div><div>
         <table border="0">
 	<tr>
 		<td> <input type="hidden" name="MAX_FILE_SIZE" value="4194304"/></td>
-		<td><input type="file"/></td>
-        <td><input type="reset" value="Delete" /></td>
-        <td><input type="file" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg"  multiple /> </td>
+		<td><input type="file" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg"  multiple /> </td>
+        <center><td><input type="reset" value="Delete" /></td>
+        <td><input type="submit" value="Send" /></td></center>
 	</tr>
 	
-</table>
+</table></div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -207,15 +210,15 @@
        
            
  <form action="myphp.php" method="post"><br>
-	Nome da Obra:<input type="text" size="15" maxlength="15" /><br />
+	Título da Obra:<input type="text" size="15" maxlength="15" /><br />
 	
-	Nome do Autor<input type="text" size="25" maxlength="25" /><br /><br>
+	Nome do Autor<input type="text" size="25" maxlength="25" /><br /><center>
 	 <table border="1">
 	<tr>
 		<td><input type="reset" value="Delete" /></td>
 		<td><input type="submit" value="Send" /></td>
 	</tr>
-	</table>
+	</table></center>
 	
 
       <div class="modal-footer">
