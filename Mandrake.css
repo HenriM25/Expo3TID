@@ -275,7 +275,8 @@ nav {
   }
 
   .Sobre {
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: right;
     float: right;
     padding-left: 10px;
     /* margin-top: -50px; */
@@ -285,6 +286,11 @@ nav {
 
   .Sobre h2 {
     text-align: right;
+  }
+
+  .home_esq {
+    float: left;
+    align-items: center;
   }
 
   .Nos {
@@ -314,6 +320,50 @@ nav {
     overflow: hidden;
     float: left;
     padding-left: 10px;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .equipe_img {
+    transition: 0.5s;
+  }
+
+  .equipe_img:hover {
+    transform: scale(1.1);
+
+  }
+
+  .EQE {
+    padding-left: 75px;
+    margin-right: 350px;
+    align-items: center;
+    margin-left: -30px;
+  }
+
+  .Exp_Home {
+    transition: 0.5s;
+  }
+
+  .Exp_Home:hover {
+    transform: scale(1.1);
+  }
+
+  .Qua_Home {
+    float: left;
+    transition: 0.5s;
+  }
+
+  .Qua_Home:hover {
+    transform: scale(1.1);
+  }
+
+  .Esc_Home {
+    float: right;
+    transition: 0.5s;
+  }
+
+  .Esc_Home:hover {
+    transform: scale(1.1);
   }
 
   @media only screen and (min-width: 600px) {
