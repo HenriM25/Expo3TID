@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -10,41 +9,54 @@
 
 <link rel="stylesheet" href= "Mandrake.css" type="text/css" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#icon').click(function() {
+      $('ul').toggleClass('show');
+    });
+  });
+</script>
 
 </head>
+
 <body>
 
 <header>
 
+    <nav id="menu">
+  
+        <label id="icon">
+          <i class="fas fa-bars"></i>
+        </label>
+        <li><a class="active" href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
+            <div class="dropdown-content">
+              <a href="quadros.html"> Quadros </a>
+              <a href="escultura.html"> Esculturas </a>
+            </div>
+        </li>
+        <li><a href=".html"> Explorar </a></li>
+        <li class="dropdown" style="float:right">
+          <a href="javascript:void(0)" class="dropbtn">Entrar <img src="IMG/Person.jpg" height="25" width="25"></a>
+            <div class="dropdown-content">
+              <a href="#" data-toggle="modal" data-target="#myModal"> Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> </a>
+              <a href=".html">Sair</a>
+            </div>
+          </li> 
+      
+    </nav>
+
   <div id="Banner">
     <a href="index.html">
-      <img src="IMG/BannerTeste3.png" width="100%">
+      <img src="IMG/ExpoMandrake_Banner.png" width="100%">
     </a>
   </div>  
-
-<nav id="menu">
-    
-  <!-- <li><a class="active" href="Home.html"> <img src="IMG\EMLogo.png" height="70" width="70" > </a></li> -->
-  <li><a href="index.html">Início</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
-      <div class="dropdown-content">
-        <a href="quadros.html"> Quadros </a>
-        <a href="escultura.html"> Esculturas </a>
-      </div>
-  <li>
-  <li><a href="quemsomos.html">Conheça-nos</a></li>
-  <li class="dropdown" style="float:right">
-    <a href="javascript:void(0)" class="dropbtn">Entrar <img src="IMG/Person.jpg" height="25" width="25"></a>
-      <div class="dropdown-content">
-        <a href="#" data-toggle="modal" data-target="#myModal"> Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> </a>
-          <a href=".html">Sair</a>
-      </div>
-    </li>
-
-</nav>
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
   <div class="modal-dialog">
@@ -53,39 +65,43 @@
               <h4 class="modal-title">Fazer login</h4><!-- Título -->
           </div>
           <div class="modal-body"><!-- Corpo do modal -->
-              <form action=""><!-- Início do Formulário -->
+              <form method="POST" action=""><!-- Início do Formulário -->
                   <div class="form-group">
                       <p>Email:</p>
-                      <input type="email" class="form-control" placeholder="Digite seu email">
+                      <input type="email" value="<?php echo $_SESSION['email'];?>" name="email" class="form-control" placeholder="Digite seu email">
                   </div>
                   <div class="form-group">
                   <p>Senha:</p>                          
-                      <input type="password" class="form-control" placeholder="Digite sua senha">
+                      <input type="password" name="senha" class="form-control" placeholder="Digite sua senha">
+                      
                   </div>
                   <div class="senha"><a href="#">Esqueceu sua senha?</a></div>
-                  <button class="btn ">Entrar</button>
-                  
+                  <button value="Entrar" class="btn" type="submit">Entrar</button>
                  <br><br>
                   <center>
                       <div class="posicao-btn">
-                          &nbsp;&nbsp;<a href="cadastro.html"><button class="btn2">Cadastrar</button></a>
-                          &nbsp;&nbsp; <button class="btn3 ">Entrar como visitante</button>
+                          &nbsp;&nbsp;<a href="cadastro.html" class="btn2" role="button"aria-pressed="true">Cadastrar</a>
+                          
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          
                       </div>
                   </center>
               </form>
           </div>
-          <div class="modal-footer"><!-- Footer do Modal -->
-              <button type="button" class="btn4" data-dismiss="modal">
-                  Fechar <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-              </button>                
-          </div>
+          
       </div>
   </div>
 </div><!-- ##Fim do Modal -->
+
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
 
-    </header> </body>
+</header>
+
     <body>
        <div id="Page">
     
@@ -184,53 +200,64 @@
  
 
 
-        </form></div></div></div>
-         <style type="text/css">
-   #perfil{
-	width:270px;
-	height:270px;
-	background-color:#FF8C00;
-    text-align: center;
-	border-radius: 180px 180px 180px 180px;
-    display: table;              
-    table-layout: fixed;        
-    border-collapse: separate;
-    border-spacing: 5px 0px;   
-     border: 8px solid #000;  
-	}
-    button{
-    background: transparent;
-    border: none !important;
-        text-align: center;
-    
-            }
-    #apelido{
-        font-family: harrington;
-        font:bold;
-     border: 2px solid #000;
-    display: table;                    
-    border-collapse: separate;
-    border-spacing: 5px 0px;  
-        text-align: center;
-      }
-    #obras{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 10;
-    display: table;              
-    table-layout: fixed;         
-    border-collapse: separate;   
-    border-spacing: 5px 0px; 
-        text-align: center;
-          }
-        #mais:hover{text-align: center;
-            
-        }   
-.item {display: table-cell;}
-.item img{width:200px;}
-    </style>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+        <footer>
+          <div id="footer">
         
-        </div>     
-</body>
-</html>
+            <h1> Exposição Mandrake </h1>
+        
+            <br>
+            
+            <div class="ft">
+              <div id="item">
+                <img src="IMG/email.png"> exposicao@mandrake.com
+              </div>
+        
+              <div id="item">
+                <img src="IMG/suporte.png"> +55 11 0000-0000
+              </div>
+        
+            </div>
+        
+            <div class="Ind">
+        
+              <h4> Mandrake's Industries 2019-2021 </h4>  
+        
+            </div>
+        
+          </div>
+        </footer>
+        <script>
+          window.onscroll = function() {scrollFunction()};
+          
+          function scrollFunction() {
+            if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
+              document.getElementById("menu").style.position="fixed";
+              document.getElementById("menu").style.marginLeft="0%";
+              document.getElementById("menu").style.marginRight="0%";
+            } else {
+              document.getElementById("menu").style.position="sticky";
+            //   document.getElementById("menu").style.marginLeft="5%";
+              // document.getElementById("menu").style.width="100%";
+            }
+          }
+          </script>
+        
+          <script type="text/javascript">
+                var counter = 1; 
+                    setInterval(function(){
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if(counter>2){
+                            counter = 1;
+                        }
+                            
+                    },10000);
+          </script>
+        
+         </body>
+        </html>
