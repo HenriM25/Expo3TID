@@ -58,7 +58,6 @@
     </a>
   </div>  
 
-
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
   <div class="modal-dialog">
       <div class="modal-content">
@@ -66,19 +65,18 @@
               <h4 class="modal-title">Fazer login</h4><!-- Título -->
           </div>
           <div class="modal-body"><!-- Corpo do modal -->
-              <form action=""><!-- Início do Formulário -->
+              <form method="POST" action=""><!-- Início do Formulário -->
                   <div class="form-group">
                       <p>Email:</p>
-                      <input type="email" class="form-control" placeholder="Digite seu email">
+                      <input type="email" value="<?php echo $_SESSION['email'];?>" name="email" class="form-control" placeholder="Digite seu email">
                   </div>
                   <div class="form-group">
                   <p>Senha:</p>                          
-                      <input type="password" class="form-control" placeholder="Digite sua senha">
+                      <input type="password" name="senha" class="form-control" placeholder="Digite sua senha">
                       
                   </div>
                   <div class="senha"><a href="#">Esqueceu sua senha?</a></div>
-                  <button class="btn">Entrar</button>
-                  
+                  <button value="Entrar" class="btn" type="submit">Entrar</button>
                  <br><br>
                   <center>
                       <div class="posicao-btn">
@@ -98,6 +96,7 @@
       </div>
   </div>
 </div><!-- ##Fim do Modal -->
+
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
 
@@ -235,3 +234,32 @@
 
  </body>
 </html>
+<?php
+include("conexao.php");
+if(isset($_POST['email']) && strlen($_POST['email']) > 0){
+
+if(!isset($_SESSION))
+session_start();
+
+$_SESSION['email'] = $mysqli ->escape_string($_POST['email']);
+$_SESSION['senha'] = md5(md5($_POST['email']));
+
+sql_code = "SELECT senha, email FROM cadastro WHERE email = '$_SESSION[email]'";
+sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+$dado = $sql_query->fetch_assoc();
+$total = $sql_query->num_rows;
+if($total == 0){
+$erro[] = "Este email não pertence a nenhum usuário.";
+}else{
+if($dado['senha'] == $_SESSION['senha']){
+$_SESSION['cadastro'] = $dado ['iduser'];
+
+}else{
+$erro[] = "Senha incorreta.";
+}
+}
+if(count($erro) == 0 || !isset($erro)){
+echo "<scrpit> alert('Login efetuado com sucesso'); location.href='sucesso.php';</script>";
+}
+ }
+?>

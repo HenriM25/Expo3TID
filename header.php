@@ -1,3 +1,20 @@
+<?php
+session_start();
+If (isset($_POST["confirmar"])){
+    $conexao= mysqli_connect("localhost","root","","exposicao_mandrake") or die ("erro na conexão");
+    $email=$_POST["email"];
+    $senha=$_POST["senha"];
+     $sql="INSERT * FROM cadastro WHERE email='$email' and senha='$senha'";
+     $result= mysqli_query($conexao,$cons);
+     if ($result){
+     while ($linha=mysqli_fetch_array($result)){
+    $_SESSION['email']=$email;
+    echo"<scrpit> alert('Login efetuado com sucesso'); location.href='sucesso.php';</script>";
+     }
+   }
+ }
+ 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -51,36 +68,40 @@
               <h4 class="modal-title">Fazer login</h4><!-- Título -->
           </div>
           <div class="modal-body"><!-- Corpo do modal -->
-              <form action=""><!-- Início do Formulário -->
+              <form method="POST" action=""><!-- Início do Formulário -->
                   <div class="form-group">
                       <p>Email:</p>
-                      <input type="email" class="form-control" placeholder="Digite seu email">
+                      <input type="email" name="email" class="form-control" placeholder="Digite seu email">
                   </div>
                   <div class="form-group">
                   <p>Senha:</p>                          
-                      <input type="password" class="form-control" placeholder="Digite sua senha">
+                      <input type="password" name="senha" class="form-control" placeholder="Digite sua senha">
+                      
                   </div>
-                  <div class="senha"><a href="#">Esqueceu sua senha?</a></div>
-                  <button class="btn ">Entrar</button>
-                  
+                  <div class="senha"><a href="esqueceuasenha.php">Esqueceu sua senha?</a></div>
+                  <input value="Entrar" name="confirmar" class="btn" type="submit">
+                 
                  <br><br>
                   <center>
                       <div class="posicao-btn">
-                          &nbsp;&nbsp;<a href="cadastro.html"><button class="btn2">Cadastrar</button></a>
-                          &nbsp;&nbsp; <button class="btn3 ">Entrar como visitante</button>
+                          &nbsp;&nbsp;<a href="cadastro.html" class="btn2 active" role="button"aria-pressed="true">Cadastrar</a>
+                          
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          
                       </div>
                   </center>
               </form>
           </div>
-          <div class="modal-footer"><!-- Footer do Modal -->
-              <button type="button" class="btn4" data-dismiss="modal">
-                  Fechar <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-              </button>                
-          </div>
+          
       </div>
   </div>
 </div><!-- ##Fim do Modal -->
+
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
-
 </header>
+    

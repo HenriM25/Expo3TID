@@ -117,9 +117,12 @@ nav {
     position:sticky;
     top: 0;
     letter-spacing: 2px;
+<<<<<<< HEAD
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: opacity 0.25s;
     z-index: 100000;
+=======
+>>>>>>> senha2_Lima
   }
   
   li {
@@ -324,6 +327,7 @@ nav {
     margin-top: -30px;
     overflow: hidden;
     float: left;
+<<<<<<< HEAD
     padding-left: 10px;
     align-items: center;
     padding-top: 50px;
@@ -369,6 +373,9 @@ nav {
 
   .Esc_Home:hover {
     transform: scale(1.1);
+=======
+    /* padding-left: 10px; */
+>>>>>>> senha2_Lima
   }
 
   @media only screen and (min-width: 600px) {
@@ -529,6 +536,30 @@ margin-top: 25px;
 .Quadros div p {
   font-size: 20px;
 }
+<<<<<<< HEAD
+=======
+.Esculturas div {
+display: inline-block;
+margin: 25px;
+border: dashed 1px;
+font-size: 15px;
+margin-top: 25px;
+}
+.Esculturas div p {
+  font-size: 20px;
+}
+
+@media all and (masx-width: 600px) {
+  nav {
+    padding: 5px 30px;
+  }
+
+  nav li {
+    width: 100%;
+
+  }
+}
+>>>>>>> senha2_Lima
 
 .slider{
   width:800px;
