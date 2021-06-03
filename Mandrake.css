@@ -29,6 +29,9 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 25px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 5px;
     padding-left: 2%;
     padding-right: 2%;
@@ -117,12 +120,9 @@ nav {
     position:sticky;
     top: 0;
     letter-spacing: 2px;
-<<<<<<< HEAD
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: opacity 0.25s;
     z-index: 100000;
-=======
->>>>>>> senha2_Lima
   }
   
   li {
@@ -327,7 +327,6 @@ nav {
     margin-top: -30px;
     overflow: hidden;
     float: left;
-<<<<<<< HEAD
     padding-left: 10px;
     align-items: center;
     padding-top: 50px;
@@ -373,9 +372,6 @@ nav {
 
   .Esc_Home:hover {
     transform: scale(1.1);
-=======
-    /* padding-left: 10px; */
->>>>>>> senha2_Lima
   }
 
   @media only screen and (min-width: 600px) {
@@ -517,8 +513,9 @@ height: 100px;
   
 }
 #Arte {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 25px; 
+  align-items: center;
+  margin-top: 40px;
 }
 
 #Arte h1 {
@@ -526,126 +523,128 @@ height: 100px;
   font-weight: 550;
 }
 
-.Quadros div {
+/* .Quadros div {
 display: inline-block;
 margin: 25px;
 border: dashed 1px;
 font-size: 15px;
 margin-top: 25px;
-}
+} */
 .Quadros div p {
   font-size: 20px;
 }
-<<<<<<< HEAD
-=======
-.Esculturas div {
-display: inline-block;
-margin: 25px;
-border: dashed 1px;
-font-size: 15px;
-margin-top: 25px;
-}
-.Esculturas div p {
-  font-size: 20px;
-}
 
-@media all and (masx-width: 600px) {
-  nav {
-    padding: 5px 30px;
-  }
-
-  nav li {
-    width: 100%;
-
-  }
-}
->>>>>>> senha2_Lima
-
-.slider{
-  width:800px;
-  height: 700px;
+.Slider_Qua {
+  width: 800px;
+  height: 500px;
   border-radius: 10px;
   overflow: hidden;
-  
+  float: right;
 }
 
-.slides{
- width: 200%;
+.Slides_Qua {
+  width: 500%;
   height: 500px;
   display: flex;
 }
 
-.slides input{
+.Slides_Qua input {
   display: none;
 }
 
-.slide{
-  width: 50%;
+.slide {
+  width: 20%;
   transition: 2s;
 }
 
-.imagens{
-  width: 100%;
-  height: 100%;
+.slide img {
+  width: 800px;
+  height: 500px;
 }
 
-.navigation-manual{
+.navigation-manual {
   position: absolute;
-  width: 600px;
-  margin-top: 475px;
+  width: 800px;
+  margin-top: -40px;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
 }
 
-.manual-btn{
-  border: 2px solid black;
-  padding: 8px;
+.manual-btn {
+  border: 2px solid purple;
+  padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-  
-}
-.manual-btn:not(:last-child){
-  margin-right: 40px;
 }
 
-manual-btn:hover{
-  background: #0000;
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
 }
 
-#radio1:checked ~ .first{
+.manual-btn:hover {
+  background: purple;
+}
+
+#radio1:checked ~ .first {
   margin-left: 0;
 }
 
-#radio2:checked ~ .first{
-  margin-left: -50%;
+#radio2:checked ~ .first {
+  margin-left: -20%;
 }
 
-.navigation-auto{
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+.navigation-auto {
   position: absolute;
   display: flex;
+  margin: 325px;
   justify-content: center;
-  width: 600px;
-  margin-top: 475px;
-  margin-left: 50px;
+  margin-top: 460px;
 }
 
-.navigation-auto div{
-  border: 2px solid black;
-  padding: 8px;
+.navigation-auto div {
+  border: 2px solid pink;
+  padding: 5px;
   border-radius: 10px;
   transition: 1s;
-   }
-
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
-   }
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-  background: black;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: black;
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: purple;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: purple;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: purple;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: purple;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: purple;
+}
+
+.Abs {
+  text-align: left;
 }
