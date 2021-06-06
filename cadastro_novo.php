@@ -7,56 +7,67 @@
 
 <title> Cadastro </title>
 
-<link rel="stylesheet" href= "Mandrake.css" type="text/css" >
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href= "cadastro1.css" type="text/css" >
     
 
 </head>
 <body>
-
-  <img src="IMG/BannerTeste1.png">
-  <nav>
-    
-    <li><a class="active" href="Home.html"> <img src="IMG/EMLogo.png" height="70" width="70" > </a></li>
-        <li><a href="quadros.html">Artes</a></li>
-        <li><a href="quemsomos.html">Quem Somos?</a></li>
-        <li class="dropdown" style="float:right">
-          <a href="javascript:void(0)" class="dropbtn">Entrar <img src="IMG/Person.jpg" height="25" width="25"></a>
-            <div class="dropdown-content">
-              <a href="#" data-toggle="modal" data-target="#myModal"> Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> </a>
-              <a href=".html">Sair</a>
-            </div>
-          
-  </nav>
          <script>
             $(document).ready(function(){
           $('#CPF').mask('999.999.999-99');
         });
         </script>
-
- <form id="formulario" name="formulario">
+    <div class="resp">
+    </div>
+ <form id="formulario" method="post" enctype="multipart/form-data" name="formulario">
+     <ul id="progress">
+         <li class="ativo">Informações Pessoais</li>
+         <li>Concluir Cadastro</li>
+     </ul>
+     
   <fieldset>
     <h2>Cadastro</h2>
     <h3>Informe-nos algumas informações</h3> 
-       <input type="text" name="nome" required min="3" title="Nome Completo. Ex:João dos Santos" placeholder="Nome" pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})(([\s]{1}[A-ZÀ-Ú]{1})([a-zà-ú]{1,}))+">
-      <input type="email" required="required" title="Ex:nome@gmail.com"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="email" placeholder="Email">
-       <input type="text" name="cpf" required placeholder="CPF" title="Digite o CPF desta forma: XXX.XXX.XXX-XX">
-      <input type="password" name="senha" maxlength="8" minlength="4" placeholder="Senha (De 4 a 8 caractéres)">
-      <input type="password" name="confsenha" maxlength="8" minlength="4" placeholder="Confirmar Senha">
-      <input type="submit" name="next" class="next acao" onClick="validarSenha()" value="Cadastrar">
-      <a href="teste.css"> <button class="prev acao">Voltar</button></a>
+       <input type="text" class="nome" name="nome" required min="3" title="Nome Completo. Ex:João dos Santos" placeholder="Nome" pattern="([A-ZÀ-Ú]{1})([a-zà-ú]{2,})(([\s]{1}[A-ZÀ-Ú]{1})([a-zà-ú]{1,}))+">
+      <input type="email" class="email" required="required" title="Ex:nome@gmail.com"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="email" placeholder="Email">
+       <input type="text" class="cpf" name="cpf" required="required" placeholder="CPF" title="Digite o CPF desta forma: XXX.XXX.XXX-XX"><br><br>
+      <div class="escolha">
+     <label>O que você é?</label><br><br>
+              Autor &nbsp;<input type="checkbox"  name="autor" value="Autor" > &nbsp;&nbsp;
+              Apreciador &nbsp;<input type="checkbox"  name="aprec" value="Apreciador" > <br><br>
+      </div>
+      <input type="button" name="next" class="next acao" value="Próximo">
+     </fieldset>
+     <fieldset>
+         <h2>Já está acabando</h2>
+         <h3>Crie uma senha e conclua o cadastro</h3>
+      <input type="password" class="senha" name="senha" id="senha" maxlength="8" minlength="4" placeholder="Senha (De 4 a 8 caractéres)" required>
+      <input type="password" class="csenha" name="confsenha" id="conf_senha" maxlength="8" minlength="4" placeholder="Confirmar Senha" required>
+      <input type="submit" name="next1" class="next acao" onClick="validarSenha()" value="Cadastrar">
+      <input type="button" name="prev" class="prev acao" value="Voltar">
     </fieldset>
     </form>
-
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="function3.js"></script>
+    
          
-    <!--<script>
-    function validarSenha()
-                    senha = document.formulario.senha.value;
-                    confsenha = document.formulario.confsenha.value;
+    <script>
+    var senha = document.getElementById("senha")
+    var conf_senha = document.getElementById("conf_senha");
 
-                    if (senha != confsenha) 
-                        alert("SENHAS DIFERENTES!\\nFAVOR DIGITAR SENHAS IGUAIS");
-    </script> --> 
+         function validatePassword(){
+         if(senha.value != conf_senha.value) {
+          conf_senha.setCustomValidity("Senhas diferentes!");
+            } else {
+         conf_senha.setCustomValidity('');
+  }
+}
+
+               senha.onchange = validatePassword;
+               conf_senha.onkeyup = validatePassword;
+
+    </script>
      
 
         <script type="text/javascript">
@@ -103,5 +114,5 @@
             return true;
         }
         </script>
-  </body>
+    </body>
 </html>

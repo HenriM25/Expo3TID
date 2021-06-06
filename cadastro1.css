@@ -1,21 +1,16 @@
 { margin: 0; padding: 0;}
 html{
     height: 100%;
-    background: linear-gradient(rgba(38,128,101,0.9), rgba(52,177,140,0.9));
+     background-image: linear-gradient(rgba(241, 65, 162, 0.5),purple);
 }
-.erros,.certo{
-    width: 390px;
-    padding: 5px;
-    background: rgba(238, 249, 113, 0.9);
-    margin: 20px auto 0 auto;
-    border: 1px solid rgba(222, 239, 10, 0.9);
-    border-radius: 4px;
-    color: #333;
+
+p{
+    text-align: center;
 }
-.certo{background: rgba(155, 222, 143, 0.9); border-color: rgba(68, 171, 50, 0.9); color: white;}
 
 body{
     font-family: "Trebuchet MS", tahoma,arial;
+   
 }
 
 #formulario{
@@ -24,9 +19,13 @@ body{
     text-align: center;
     position: relative;
 }
+#formulario .escolha{
+    text-align: left;
+}
+    
 #formulario h2,#formulario h3{
     font: 22px "Trebuchet MS", tahoma, arial;
-    color: #090;
+    color:black;
     width: 100%;
     float: left;
     text-align: left;
@@ -41,7 +40,7 @@ body{
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     
-    box-shadow: 0 0 15px 1px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px 1px linear-gradient(rgba(241, 65, 162, 0.5),purple);
     padding: 20px 30px;
     
     box-sizing: border-box;
@@ -54,19 +53,22 @@ body{
 }
 #formulario input,#formulario button{
     padding: 10px;
-    border: 1px solid rgba(38,128,101,0.9);
+    border: 1px solid linear-gradient(rgba(241, 65, 162, 0.5),purple);
     border-radius: 4px;
     
     -webkit-border-radius:4px;
     box-sizing: border-box;
-    width: 100%;
+    
     font: 14px "Trebuchet MS", tahoma, arial;
     color: #090;
     margin-bottom: 10px;
 }
+.nome, .email, .cpf, .senha, .csenha{
+    width: 100%;
+}
 #formulario .acao{
     width: 100px;
-    background: rgba(38, 128, 101, 0.9);
+    background: black;
     color: white;
     text-transform: uppercase;
     font-weight:bold;
@@ -74,7 +76,7 @@ body{
     float: left;
     margin-right: 5%;
 }
-#formulario .acao:hover{background: rgba(52,177,140,0.9); cursor: pointer;}
+#formulario .acao:hover{background: linear-gradient(rgba(241, 65, 162, 0.5),purple); cursor: pointer;}
 
 #formulario #progress{
     margin-bottom: 30px;
@@ -85,7 +87,7 @@ body{
 
 #formulario #progress li{
     list-style-type: none;
-    color: white;
+    color: black;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 10px;
@@ -122,7 +124,7 @@ body{
 }
 
 #formulario #progress li.ativo:before, #formulario #progress li.ativo:after{
-    background: rgba(40, 208, 141, 0.9);
-    color: white;
+    background: linear-gradient(rgba(241, 65, 162, 0.5),purple);
+    color: black;
     text-shadow: 0 1px 0;
 }
