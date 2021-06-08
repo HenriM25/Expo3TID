@@ -8,7 +8,8 @@ body {
     text-align: center;  
     background-color:wheat;
     font-size: 50px;
-    background-image: linear-gradient(purple,rgba(241, 65, 162, 0.5));
+    //background-image: linear-gradient(purple,rgba(241, 65, 162, 0.5));
+    background-image: blue;
 }
 
 #Banner {
@@ -418,7 +419,7 @@ margin-top: 25px;
   font-size: 20px;
 }
 
-@media all and (masx-width: 600px) {
+@media all and (max-width: 600px) {
   nav {
     padding: 5px 30px;
   }
@@ -517,3 +518,19 @@ manual-btn:hover{
 #radio2:checked ~ .navigation-auto .auto-btn2{
   background: black;
 }
+
+.rec-body{
+  background-color: white;
+  text-align: left;
+    
+}
+.rec{
+  display:block;
+    width: 600px;
+  text-align: center;
+  background-color: white;
+    /*border: solid;*/
+}
+.rec-title{
+  font-size: 100px;
+     }
