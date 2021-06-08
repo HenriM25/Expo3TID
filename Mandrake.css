@@ -36,6 +36,8 @@ body {
     padding-left: 2%;
     padding-right: 2%;
     z-index: 10000;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 #Page h1 {
@@ -540,6 +542,15 @@ margin-top: 25px;
   border-radius: 10px;
   overflow: hidden;
   float: right;
+  margin-left: 50px;
+}
+.Slider_Qua_2 {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  float: left;
+  margin-right: 50px;
 }
 
 .Slides_Qua {
@@ -606,6 +617,26 @@ margin-top: 25px;
   margin-left: -80%;
 }
 
+#radio6:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio8:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio9:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio10:checked ~ .first {
+  margin-left: -80%;
+}
+
 .navigation-auto {
   position: absolute;
   display: flex;
@@ -646,5 +677,13 @@ margin-top: 25px;
 }
 
 .Abs {
+  text-align: left;
+}
+
+.Ved {
+  text-align: left;
+}
+
+.Rea {
   text-align: left;
 }
