@@ -649,3 +649,97 @@ manual-btn:hover{
 #radio2:checked ~ .navigation-auto .auto-btn2{
   background: black;
 }
+#perfil {
+  
+	}
+    button1{
+    background: transparent;
+    border: none !important;
+        text-align: center;
+    
+            }
+    
+  
+
+    #obras{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10;
+    display: table;              
+    table-layout: fixed;         
+    border-collapse: separate;   
+    border-spacing: 5px 0px; 
+        text-align: center;
+          }
+        #mais:hover{text-align: center;
+            
+        }   
+.item {display: table-cell;}
+.item img{width:200px;}
+
+.teste{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.apelidoPost{
+  background-color: red;
+display: flex;
+justify-content: center;
+margin-left: 5%;
+}
+
+.bnt{
+  
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  margin-left: 5%;
+
+}
+
+.bnt2{
+  
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+ 
+
+}
+
+
+.obras{
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
+ 
+}
+
+.bntRed{
+  background:red;
+    height: 50px;
+    width: 100px;
+    border: aliceblue;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.bntVerde{
+  background:green;
+    height: 50px;
+    width: 100px;
+    border: aliceblue;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.FotoPerfil{
+  border-radius: 360px;
+  height: 180px;
+  width: 180px;
+  
+  border: 8px solid rgb(209, 9, 209);  
+}
