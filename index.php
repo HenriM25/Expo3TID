@@ -20,7 +20,7 @@
 
         <div class="Qua_Home col-2">
 
-          <a href="quadros.html">
+          <a href="quadros.php">
             <img src="IMG/Home_Quadros.jpg">
           </a>
 
@@ -28,7 +28,7 @@
 
         <div class="Esc_Home col-2">
 
-          <a href="escultura.html">
+          <a href="escultura.php">
             <img src="IMG/Home_Esculturas.jpg">
           </a>
 

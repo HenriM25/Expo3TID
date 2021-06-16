@@ -54,8 +54,8 @@ If (isset($_POST["confirmar"])){
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn"> História da Arte </a>
             <div class="dropdown-content">
-              <a href="quadros.html"> Quadros </a>
-              <a href="escultura.html"> Esculturas </a>
+              <a href="quadros.php"> Quadros </a>
+              <a href="escultura.php"> Esculturas </a>
             </div>
         </li>
         <li><a href=".html"> Explorar </a></li>
@@ -70,7 +70,7 @@ If (isset($_POST["confirmar"])){
     </nav>
 
   <div id="Banner">
-    <a href="index.html">
+    <a href="index.php">
       <img src="IMG/ExpoMandrake_Banner.png" width="100%">
     </a>
   </div>  
