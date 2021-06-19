@@ -33,8 +33,8 @@
        <input type="text" class="cpf" name="cpf" required="required" placeholder="CPF" title="Digite o CPF desta forma: XXX.XXX.XXX-XX"><br><br>
       <div class="escolha">
      <label>O que você é?</label><br><br>
-              Autor &nbsp;<input type="checkbox"  name="autor" value="Autor" > &nbsp;&nbsp;
-              Apreciador &nbsp;<input type="checkbox"  name="aprec" value="Apreciador" > <br><br>
+              Autor &nbsp;<input type="radio"  name="classe" value="Autor" > &nbsp;&nbsp;
+              Apreciador &nbsp;<input type="radio"  name="classe" value="Apreciador" > <br><br>
       </div>
       <input type="button" name="next" class="next acao" value="Próximo">
      </fieldset>
@@ -116,3 +116,24 @@
         </script>
     </body>
 </html>
+<?php
+If (isset($_POST["next1"])){
+    $conexao= mysqli_connect("localhost","root","","exposicao_mandrake") or die ("erro na conexão");
+    mysqli_set_charset($conexao, "utf8");
+    $nome=$_POST['nome'];
+    $email=$_POST['email'];
+    $cpf=$_POST['cpf'];
+    $senha=$_POST['senha'];
+    $classe=$_POST['classe'];
+     $sql="INSERT INTO cadastro (nome,email,cpf,senha,classe) VALUES ('$nome', '$email', '$cpf', '$senha', '$classe')";
+        $resultado = mysqli_query($conexao, $sql);
+   if ($resultado) {
+	echo "<script language ='javascript' type= 'text/javascript'> window.location.href='index.php';</script>";
+} else {
+	echo "Error: "  ;
+}
+mysqli_close($conexao);
+            	
+     }
+
+?>

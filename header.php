@@ -85,7 +85,7 @@ If (isset($_POST["confirmar"])){
               <form method="POST" action=""><!-- Início do Formulário -->
                   <div class="form-group">
                       <p>Email:</p>
-                      <input type="email" value="<?php echo $_SESSION['email'];?>" name="email" class="form-control" placeholder="Digite seu email">
+                      <input type="email"  name="email" class="form-control" placeholder="Digite seu email">
                   </div>
                   <div class="form-group">
                   <p>Senha:</p>                          
@@ -97,7 +97,7 @@ If (isset($_POST["confirmar"])){
                  <br><br>
                   <center>
                       <div class="posicao-btn">
-                          &nbsp;&nbsp;<a href="cadastro.html" class="btn2" role="button"aria-pressed="true">Cadastrar</a>
+                          &nbsp;&nbsp;<a href="cadastro_novo.php" class="btn2" role="button"aria-pressed="true">Cadastrar</a>
                           
                           <br>
                           <br>
