@@ -709,12 +709,13 @@ margin-left: 5%;
 }
 
 
-.obras{
+.obras2{
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-top: 5%;
+    justify-content: center;
  
 }
 
