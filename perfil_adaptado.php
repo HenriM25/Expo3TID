@@ -41,7 +41,7 @@
                   <div class="obra">
                     <h1>Adicionar Obras</h1>
                   </div>
-                  <form class="form-inline" action="myphp.php" method="post">
+                  <form class="form-inline" action="SalvarObra.php" method="post">
       
                     <div class="bnt">
                       <input type="file" accept="image/png, image/jpeg" multiple name="EscolherObra" />
@@ -53,10 +53,10 @@
       <label >Estilo:</label>
        
       <select name="estilo">
-  <option value="estilo" name="Veduta">Veduta</option>
-  <option value="estilo" name="Figurativa">Figurativa</option>
-  <option value="estilo" name="Abstrata">Abstrata</option>
-  <option value="estilo" name="Realista">Realista</option>
+  <option value="Veduta" name="estilo">Veduta</option>
+  <option value="Figurativa" name="estilo">Figurativa</option>
+  <option value="Abstrata" name="estilo">Abstrata</option>
+  <option value="Realista" name="estilo">Realista</option>
 </select>
 
     </div>
@@ -79,7 +79,6 @@
    
 
         </div>
-
 
         
 <?php include 'footer.php'; ?>
