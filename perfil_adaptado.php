@@ -44,7 +44,7 @@
                   <form class="form-inline" action="SalvarObra.php" method="post">
       
                     <div class="bnt">
-                      <input type="file" accept="image/png, image/jpeg" multiple name="EscolherObra" />
+                      <input type="file" accept="image/png, image/jpeg" multiple name="endereco_imagem" />
                     </div><br>
        <label>Titulo:</label>
       <input type="text" class="form-control" name="titulo">
@@ -70,7 +70,7 @@
           </div>
       
             </div>
-            <div class="obras2">
+            <div class="obras2" name="obras">
               <li class="item"><img src="IMG/Ainda não há obras.png"></li>
             </div>
         
