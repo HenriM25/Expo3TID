@@ -41,7 +41,7 @@
                   <div class="obra">
                     <h1>Adicionar Obras</h1>
                   </div>
-                  <form class="form-inline" action="SalvarObra.php" method="post">
+                  <form class="form-inline" name="formp" method="post">
       
                     <div class="bnt">
                       <input type="file" accept="image/png, image/jpeg" multiple name="endereco_imagem" />
@@ -80,5 +80,24 @@
 
         </div>
 
+
         
 <?php include 'footer.php'; ?>
+<?php
+session_start();
+If (isset($_POST['Send'])){
+    
+$conexao=mysqli_connect("localhost","root","","exposicao_mandrake") ;
+
+
+    $nome=$_FILES['endereco_imagem']['name'];
+    $titulo=$_POST['titulo'];
+    $estilo=$_POST['estilo'];
+    $iduser=$_SESSION['iduser'];
+  
+    $sql="INSERT INTO obras (titulo,estilo,iduser,endereco_imagem)  VALUE ('$titulo', '$estilo', '$iduser', '$nome')";
+    $teste= mysqli_query($conexao,$sql);
+    $temp=$_FILES['endereco_imagem']['tmp_name'];
+    move_uploaded_file($temp,"imagens/$nome");/* movendo para pasta do servidor*/
+}
+?>
