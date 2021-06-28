@@ -10,8 +10,8 @@
             <tr>
               <td>
                 <div id="perfil" align="center" class="imagens_home">
-                  <button1 type="button" data-toggle="modal" data-target="#Perfil"> <br> <img class="FotoPerfil"  src="IMG/Person.jpg"
-                      height="120" width="150" alt=""></button1>
+                  <br> <img class="FotoPerfil"  src="IMG/Person.jpg"
+                      height="120" width="150" alt="">
                 </div>
               </td>
       
@@ -32,29 +32,7 @@
       
           <div class="teste">
       
-            <div class="aaaa">
-              <table border="4">
-      
-                <tr>
-                  <td>
-        
-                    <div class="obra">
-                      <h1>Editar apelido:</h1>
-                    </div>
-                    <form action="myphp.php" method="post">
-                    <div class="bnt2">
-                      <input type="text" multiple />
-                    </div>
-        
-                    <div class="bnt">
-                      <input class="bntRed" type="reset" value="Delete" />
-                      <input  class= "bntVerde"type="submit" value="Edit" />
-                        </div></form></td></tr>
-        
-              </table>
-            
-            </div>
-            
+           
       
                 <div class="obrasPost">
             <table border="4">
@@ -63,54 +41,63 @@
                   <div class="obra">
                     <h1>Adicionar Obras</h1>
                   </div>
-                  <form action="myphp.php" method="post">
+                  <form class="form-inline" name="formp" method="post">
       
                     <div class="bnt">
-                      <input type="file" accept="image/png, image/jpeg" multiple />
-                    </div>
-      
-                    <div class="bnt">
-                      <input class="bntRed" type="reset" value="Delete" />
-                      <input class= "bntVerde" type="submit" value="Send" />
-                      </div></form></td></tr>
+                      <input type="file" accept="image/png, image/jpeg" multiple name="endereco_imagem" />
+                    </div><br>
+       <label>Titulo:</label>
+      <input type="text" class="form-control" name="titulo">
+                      
+    <div class="form-group">
+      <label >Estilo:</label>
+       
+      <select name="estilo">
+  <option value="Veduta" name="estilo">Veduta</option>
+  <option value="Figurativa" name="estilo">Figurativa</option>
+  <option value="Abstrata" name="estilo">Abstrata</option>
+  <option value="Realista" name="estilo">Realista</option>
+</select>
+
+    </div>
+                      <div class="bnt">
+                      <input class="bntRed" type="reset" value="Reset" name="Reset" />
+                      <input class= "bntVerde" type="submit" value="Send" name="Send" />
+                         </div>
+                    </form></td></tr>
       
                       </table>
           </div>
       
             </div>
-            <div class="obras">
+            <div class="obras2" name="obras">
               <li class="item"><img src="IMG/Ainda não há obras.png"></li>
             </div>
         
-<!-- Modal -->
-<div id="Perfil" class="modal fade" role="dialog">
-  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button1 type="button" class="close" data-dismiss="modal">&times;</button1>
-        <h4 class="modal-title">Alterar Foto de Perfil</h4>
-      </div>
-      <div class="modal-body">
-        <p>Adicionar uma foto ajuda as pessoas a reconhecerem seu perfil, além de mostrar quando a conta esta conectada.</p>
-      </div><div><form action="myphp.php" method="post">
-        <table border="0">
-	<tr>
-		<td> <input type="hidden" name="MAX_FILE_SIZE" value="4194304"/></td>
-		<td><input type="file" name="arquivos" class="btn btn-success"  accept="image/png, image/jpeg"  multiple /> </td>
-        <center><td><input type="reset" value="Delete" /></td>
-        <td><input type="submit" value="Send" /></td></center>
-	</tr>
-	
-        </table></form></div>
-      <div class="modal-footer">
-        <button1 type="button" class="btn btn-default" data-dismiss="modal">Close</button1>
-      </div>
-    </div>
 
-  </div>
-</div>
-</div>
+   
+
+        </div>
+
+
         
 <?php include 'footer.php'; ?>
+<?php
+session_start();
+If (isset($_POST['Send'])){
+    
+$conexao=mysqli_connect("localhost","root","","exposicao_mandrake") ;
+
+
+    $nome=$_FILES['endereco_imagem']['name'];
+    $titulo=$_POST['titulo'];
+    $estilo=$_POST['estilo'];
+    $iduser=$_SESSION['iduser'];
+  
+    $sql="INSERT INTO obras (titulo,estilo,iduser,endereco_imagem)  VALUE ('$titulo', '$estilo', '$iduser', '$nome')";
+    $teste= mysqli_query($conexao,$sql);
+    $temp=$_FILES['endereco_imagem']['tmp_name'];
+    move_uploaded_file($temp,"imagens/$nome");/* movendo para pasta do servidor*/
+}
+?>
