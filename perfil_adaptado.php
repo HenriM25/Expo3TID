@@ -41,10 +41,10 @@
                   <div class="obra">
                     <h1>Adicionar Obras</h1>
                   </div>
-                  <form class="form-inline" name="formp" method="post">
+                  <form class="form-inline" action="" name="formp" method="post" enctype="multipart/form-data">
       
                     <div class="bnt">
-                      <input type="file" accept="image/png, image/jpeg" multiple name="endereco_imagem" />
+                      <input type="file" name="endereco" value="imagem"/>
                     </div><br>
        <label>Titulo:</label>
       <input type="text" class="form-control" name="titulo">
@@ -64,40 +64,52 @@
                       <input class="bntRed" type="reset" value="Reset" name="Reset" />
                       <input class= "bntVerde" type="submit" value="Send" name="Send" />
                          </div>
+                      
                     </form></td></tr>
       
                       </table>
           </div>
       
             </div>
+     <br><br>     <div class="PHP">  <?php
+/*$session_start();*/
+If (isset($_POST['Send'])){
+    
+$conexao=mysqli_connect("localhost","root","","exposicao_mandrake") ;
+
+
+    var_dump($_FILES['endereco']);
+    $nome=$_FILES['endereco']['name'];
+    $titulo=$_POST['titulo'];
+    $estilo=$_POST['estilo'];
+    /*$iduser=$_SESSION['iduser'];*/
+  
+    $sql="INSERT INTO obras (titulo,estilo,endereco_imagem)  VALUE ('$titulo', '$estilo', '$nome')";
+    $teste= mysqli_query($conexao,$sql);
+    $temp=$_FILES['endereco']['tmp_name'];
+    move_uploaded_file($temp,"imagens/$nome");/* movendo para pasta do servidor*/
+
+
+            
+  if (isset($_FILES['endereco']['name'], $uploadfile)) {
+   echo'<img src="IMG/Ainda não há obras.png" height="220" width="250">';
+} else {
+      
+   echo'<img src=imagens/'.$nome.' height="320" width="350">';
+} }
+            
+?> </div> 
             <div class="obras2" name="obras">
               <li class="item"><img src="IMG/Ainda não há obras.png"></li>
+               
             </div>
         
 
 
-   
+
 
         </div>
 
 
         
 <?php include 'footer.php'; ?>
-<?php
-session_start();
-If (isset($_POST['Send'])){
-    
-$conexao=mysqli_connect("localhost","root","","exposicao_mandrake") ;
-
-
-    $nome=$_FILES['endereco_imagem']['name'];
-    $titulo=$_POST['titulo'];
-    $estilo=$_POST['estilo'];
-    $iduser=$_SESSION['iduser'];
-  
-    $sql="INSERT INTO obras (titulo,estilo,iduser,endereco_imagem)  VALUE ('$titulo', '$estilo', '$iduser', '$nome')";
-    $teste= mysqli_query($conexao,$sql);
-    $temp=$_FILES['endereco_imagem']['tmp_name'];
-    move_uploaded_file($temp,"imagens/$nome");/* movendo para pasta do servidor*/
-}
-?>

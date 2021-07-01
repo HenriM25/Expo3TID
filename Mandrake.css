@@ -981,3 +981,9 @@ margin-left: 5%;
   
   border: 8px solid rgb(209, 9, 209);  
 }
+.PHP{
+visibility: hidden;
+    }
+img{
+ visibility: visible;
+}
