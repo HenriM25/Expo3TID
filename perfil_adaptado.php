@@ -98,7 +98,13 @@ $conexao=mysqli_connect("localhost","root","","exposicao_mandrake") ;
    echo'<img src=imagens/'.$nome.' height="320" width="350">';
 } }
             
-?> </div> 
+?> </div> <style type="text/css">
+            .PHP{
+visibility: hidden;
+    }
+img{
+ visibility: visible;
+}</style>
             <div class="obras2" name="obras">
               <li class="item"><img src="IMG/Ainda não há obras.png"></li>
                
